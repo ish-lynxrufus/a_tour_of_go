@@ -12,7 +12,16 @@ func main() {
 	s = s[:4]
 	printSlice(s)
 
-	s = s[2:]
+	s = s[:]
+	printSlice(s)
+
+	s = s[2:4]
+	printSlice(s)
+
+	s = s[:0]
+	printSlice(s)
+
+	s = s[:2]
 	printSlice(s)
 }
 
