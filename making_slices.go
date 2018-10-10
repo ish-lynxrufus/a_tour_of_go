@@ -14,6 +14,9 @@ func main() {
 
 	d := c[2:5]
 	printSlice("d", d)
+
+	e := d[1:3]
+	printSlice("e", e)
 }
 
 func printSlice(s string, x []int) {
