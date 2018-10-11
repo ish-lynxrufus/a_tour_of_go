@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 type I interface {
 	M()
@@ -15,6 +18,10 @@ func (t T) M() {
 }
 
 func main() {
+	var ti I
+	fmt.Println(ti, reflect.TypeOf(ti))
+
 	var i I = T{"hello"}
+	fmt.Println(i, reflect.TypeOf(i))
 	i.M()
 }
